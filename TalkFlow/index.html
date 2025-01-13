@@ -1,0 +1,100 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>TalkFlow Project</title>
+    <style type="text/css">
+        body {
+            background-color: #000035; /* Changed background color to Midnight Blue */
+            color: #ffffff; /* White text */
+            font-family: 'Arial', sans-serif;
+            margin: 0;
+            padding: 0;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            height: 100vh;
+            overflow: hidden; /* Prevent scrolling */
+        }
+        .container {
+            text-align: center;
+            max-width: 600px;
+            margin: 0 auto;
+            background-color: #1e1e1e; /* Darker box */
+            padding: 30px; /* Increased padding */
+            border-radius: 15px; /* More rounded corners */
+            box-shadow: 0 0 30px rgba(255, 255, 255, 0.2); /* Subtle shadow */
+            animation: glow 1.5s linear infinite alternate; /* Glowing effect */
+        }
+
+        @keyframes glow {
+            0% {
+                box-shadow: 0 0 30px rgba(255, 255, 255, 0.5);
+            }
+            100% {
+                box-shadow: 0 0 60px rgba(255, 255, 255, 1); /* Brighter glow */
+            }
+        }
+
+        .header {
+            margin-bottom: 20px;
+        }
+        .header h1 {
+            font-size: 2.5em;
+            margin: 0;
+            color: #1e88e5; /* Neon blue */
+            text-shadow: 0 0 10px rgba(30, 136, 229, 0.7); /* Glow effect */
+        }
+        .header p {
+            font-size: 1.2em;
+            margin: 5px 0 15px;
+        }
+        .content {
+            font-size: 1em;
+            line-height: 1.6em;
+        }
+        .content p {
+            margin: 15px 0;
+        }
+        .button {
+            background-color: #1e88e5; /* Button color */
+            color: #ffffff;
+            padding: 15px 25px;
+            text-decoration: none;
+            border-radius: 5px;
+            font-size: 1em;
+            transition: background-color 0.3s ease, transform 0.3s ease; /* Added transform */
+            display: inline-block; /* Center button */
+        }
+        .button:hover {
+            background-color: #0d47a1; /* Darker on hover */
+            transform: scale(1.05); /* Slightly enlarge on hover */
+        }
+        .footer {
+            margin-top: 20px;
+            font-size: 0.8em;
+            color: #757575;
+        }
+    </style>
+</head>
+<body>
+    <div class="container">
+        <div class="header">
+            <h1>TalkFlow</h1>
+            <p>Learn English with ease</p>
+        </div>
+
+        <div class="content">
+            <p>Welcome to the official GitHub repository for TalkFlow! TalkFlow is a software that can help you learn English. Designed to be both intuitive and effective, TalkFlow offers a range of features to improve your language skills, from vocabulary building to conversational practice.</p>
+
+            <p>Explore the repository to find the source code, documentation, and contribution guidelines. Join our community and enhance your English learning journey!</p>
+            <a class="button" href="https://github.com/adibshirazi/TalkFlow">Visit GitHub Repository</a>
+        </div>
+
+        <div class="footer">
+            <p>&copy; 2024 TalkFlow. All rights reserved.</p>
+        </div>
+    </div>
+</body>
+</html>
