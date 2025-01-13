@@ -12,6 +12,7 @@
             justify-content: center;
             height: 100vh;
             margin: 0;
+            position: relative;
         }
 
         h1 {
@@ -28,10 +29,32 @@
                 filter: blur(10px);
             }
         }
+
+        .contact {
+            position: absolute;
+            bottom: 20px;
+            color: #666;
+            font-family: Arial, Helvetica, sans-serif;
+            font-size: 0.8em;
+            text-align: center;
+            width: 100%;
+        }
+
+        .contact a {
+            color: #666;
+            text-decoration: none;
+        }
+
+        .contact a:hover {
+            color: #666;
+            transform: none;
+        }
     </style>
-    <h1>ASH</h1>
 </head>
 <body>
-
+    <h1>ASH</h1>
+    <div class="contact">
+        <a href="contact.html">Contact</a>
+    </div>
 </body>
 </html>
