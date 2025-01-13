@@ -1,0 +1,178 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>ASH - Projects</title>
+    <link rel="icon" href="icon.png" type="image/png">
+    <style>
+        html, body {
+            margin: 0;
+            padding: 0;
+            height: 100%;
+            display: flex;
+            flex-direction: column;
+            background-color: black;
+            color: white;
+            font-family: Arial, Helvetica, sans-serif;
+            overflow: hidden;
+        }
+
+        .content {
+            flex: 1;
+            display: flex;
+            flex-direction: column;
+            opacity: 0;
+            animation: fadeInPage 1s ease-in-out forwards;
+        }
+
+        @keyframes fadeInPage {
+            0% {
+                opacity: 0;
+            }
+            100% {
+                opacity: 1;
+            }
+        }
+
+        header {
+            text-align: center;
+            padding: 20px 0;
+            border-bottom: 1px solid #333;
+        }
+
+        @keyframes fadeInScale {
+            0% {
+                opacity: 0;
+                transform: scale(0.9);
+                filter: blur(1px);
+            }
+            100% {
+                opacity: 1;
+                transform: scale(1);
+                filter: blur(0);
+            }
+        }
+
+        @keyframes applyGlow {
+            0% {
+                text-shadow: none;
+            }
+            100% {
+                text-shadow: 0 0 10px rgba(255, 255, 255, 0.7);
+            }
+        }
+
+        header h1 {
+            margin: 0;
+            font-size: 3em;
+            opacity: 0;
+            transform: scale(0.9);
+            filter: blur(1px);
+            animation: fadeInScale 1.5s ease-out forwards, applyGlow 0.45s ease-out 1.5s forwards;
+        }
+
+        .projects {
+            display: flex;
+            flex-wrap: wrap;
+            justify-content: center;
+            padding: 20px;
+            gap: 20px;
+        }
+
+        .project-card {
+            background-color: #222;
+            padding: 20px;
+            width: 300px;
+            border-radius: 10px;
+            box-shadow: 0 4px 8px rgba(0, 0, 0, 0.5);
+            transition: transform 0.3s ease, box-shadow 0.3s ease;
+        }
+
+        .project-card:hover {
+            transform: scale(1.05);
+            box-shadow: 0 6px 12px rgba(255, 255, 255, 0.2);
+        }
+
+        .project-title {
+            font-size: 1.5em;
+            margin: 0 0 10px;
+        }
+
+        .project-description {
+            font-size: 0.9em;
+            line-height: 1.6;
+            color: #bbb;
+        }
+
+        .project-link {
+            display: inline-block;
+            margin-top: 10px;
+            color: #00bcd4;
+            text-decoration: none;
+            font-weight: bold;
+        }
+
+        .project-link:hover {
+            color: #03a9f4;
+        }
+
+        footer {
+            background-color: #111;
+            text-align: center;
+            padding: 10px;
+            color: #666;
+            font-size: 0.8em;
+            opacity: 0;
+            animation: fadeInFooter 1.5s ease-out 1s forwards;
+        }
+
+        @keyframes fadeInFooter {
+            0% {
+                opacity: 0;
+            }
+            100% {
+                opacity: 1;
+            }
+        }
+
+        footer a {
+            color: #666;
+            text-decoration: none;
+        }
+
+        footer a:hover {
+            color: white;
+        }
+    </style>
+</head>
+<body>
+    <div class="content">
+        <header>
+            <h1>Projects</h1>
+        </header>
+
+        <div class="projects">
+            <div class="project-card">
+                <h2 class="project-title">English Quiz App</h2>
+                <p class="project-description">An interactive quiz application using Python and SQLite to enhance English vocabulary and grammar.</p>
+                <a href="https://github.com/adibshirazi/TalkFlow" class="project-link">View Project</a>
+            </div>
+            <div class="project-card">
+                <h2 class="project-title">Voice to Words Web App</h2>
+                <p class="project-description">A web application using Vosk speech recognition to transcribe audio files into text with support for multiple languages.</p>
+                <a href="https://github.com/adibshirazi/VoiceToWords" class="project-link">View Project</a>
+            </div>
+            <div class="project-card">
+                <h2 class="project-title">Power Load Prediction</h2>
+                <p class="project-description">A deep learning model for predicting hourly power loads for multiple stations using historical data.</p>
+                <a href="" class="project-link">View Project</a>
+            </div>
+        </div>
+    </div>
+
+    <footer>
+        <p>&copy; 2025 ASH. All rights reserved. | <a href="contact.html">Contact</a></p>
+    </footer>
+</body>
+</html>
