@@ -1,0 +1,157 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>404 - Page Not Found</title>
+    <link rel="icon" href="/icon.png" type="image/png">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta3/css/all.min.css">
+    <style>
+        body {
+            margin: 0;
+            padding: 0;
+            font-family: Arial, sans-serif;
+            color: #ddd;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            height: 100vh;
+            overflow: hidden;
+            background-color: #000;
+            animation: fadeInContent 1.5s ease-in;
+            animation-fill-mode: forwards;
+        }
+
+        @keyframes fadeInContent {
+            0% {
+                opacity: 0;
+                background-color: #000;
+            }
+            100% {
+                opacity: 1;
+                background-color: #111;
+            }
+        }
+
+        .error-container {
+            text-align: center;
+            margin-bottom: 30px;
+        }
+
+        h1 {
+            font-size: 3rem;
+            margin-bottom: 20px;
+            color: #f44336;
+        }
+
+        p {
+            font-size: 1.2rem;
+            margin: 15px 0;
+        }
+
+        a {
+            color: #00bcd4;
+            text-decoration: none;
+            font-weight: bold;
+            position: relative;
+            padding-bottom: 2px;
+        }
+
+        a::after {
+            content: '';
+            position: absolute;
+            width: 100%;
+            height: 2px;
+            bottom: 0;
+            left: 0;
+            background-color: #00bcd4;
+            transform: scaleX(0);
+            transform-origin: bottom right;
+            transition: transform 0.3s ease-out;
+        }
+
+        a:hover::after {
+            transform: scaleX(1);
+            transform-origin: bottom left;
+        }
+
+        a:hover {
+            color: #03a9f4;
+        }
+
+        .home {
+            position: absolute;
+            bottom: 20px;
+            right: 20px;
+            color: #666;
+            font-family: Arial, Helvetica, sans-serif;
+            font-size: 0.8em;
+            text-align: center;
+        }
+
+        .home a {
+            color: #666;
+            text-decoration: none;
+        }
+
+        .home a:hover {
+            color: #666;
+            transform: none;
+        }
+
+        footer {
+            text-align: center;
+            position: absolute;
+            bottom: 0px;
+            left: 50%;
+            transform: translateX(-50%);
+            color: #666;
+            font-size: 0.8rem;
+            padding: 20px 0;
+        }
+
+        .social-media {
+            margin-top: 20px;
+        }
+
+        .social-media a {
+            margin: 5px 10px;
+            font-size: 1.5em;
+            color: #00bcd4;
+        }
+
+        .social-media a:hover {
+            color: #03a9f4;
+        }
+
+        @media (max-width: 600px) {
+            h1 {
+                font-size: 2rem;
+            }
+            .error-container p {
+                font-size: 1rem;
+            }
+            .home {
+                position: fixed;
+                bottom: 10px;
+                right: 10px;
+            }
+        }
+    </style>
+</head>
+<body>
+    <div class="error-container">
+        <h1>404 - Page Not Found</h1>
+        <p>Sorry, the page you're looking for doesn't exist.</p>
+        <p>Perhaps you'd like to go back to the <a href="https://theash.me">homepage</a> or check out one of my links below:</p>
+        <div class="social-media">
+            <a href="https://twitter.com/x" target="_blank"><i class="fab fa-twitter"></i> Twitter</a>
+            <a href="https://github.com/adibshirazi" target="_blank"><i class="fab fa-github"></i> GitHub</a>
+        </div>
+    </div>
+    <div class="home">
+        <a href="https://theash.me">Home</a>
+    </div>
+    <footer>&copy; 2025 ASH. All rights reserved.</footer>
+</body>
+</html>
