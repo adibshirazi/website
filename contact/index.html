@@ -4,30 +4,78 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>ASH - Contact</title>
-    <link rel="icon" href="icon.png" type="image/png">
+    <link rel="icon" href="/icon.png" type="image/png">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta3/css/all.min.css">
     <style>
         body {
-            background-color: black;
-            color: #f0f0f0;
-            font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
             margin: 0;
+            padding: 0;
+            font-family: Arial, sans-serif;
+            color: #ddd;
             display: flex;
-            align-items: center;
             justify-content: center;
-            flex-direction: column;
-            min-height: 100vh;
-            animation: fadeIn 2s ease;
+            align-items: center;
+            height: 100vh;
+            overflow: hidden;
+            background-color: #000;
+            animation: fadeInContent 1.5s ease-in;
+            animation-fill-mode: forwards;
         }
 
-        h1, .contact-section, footer {
-            animation: fadeIn 2s ease;
+        @keyframes fadeInContent {
+            0% {
+                opacity: 0;
+                background-color: #000;
+            }
+            100% {
+                opacity: 1;
+                background-color: #111;
+            }
+        }
+
+        .contact-container {
+            text-align: center;
+            margin-bottom: 30px;
         }
 
         h1 {
-            font-size: 3em;
+            font-size: 2.5rem;
             margin-bottom: 20px;
-            color: #ff8c00;
-            text-align: center;
+        }
+
+        p {
+            font-size: 1.2rem;
+            margin: 15px 0;
+        }
+
+        a {
+            color: #00bcd4;
+            text-decoration: none;
+            font-weight: bold;
+            position: relative;
+            padding-bottom: 2px;
+        }
+
+        a::after {
+            content: '';
+            position: absolute;
+            width: 100%;
+            height: 2px;
+            bottom: 0;
+            left: 0;
+            background-color: #00bcd4;
+            transform: scaleX(0);
+            transform-origin: bottom right;
+            transition: transform 0.3s ease-out;
+        }
+
+        a:hover::after {
+            transform: scaleX(1);
+            transform-origin: bottom left;
+        }
+
+        a:hover {
+            color: #03a9f4;
         }
 
         .home {
@@ -50,87 +98,55 @@
             transform: none;
         }
 
-        .email {
-            font-size: 1.3em;
-            color: #ffa500;
-            text-decoration: none;
-            margin: 10px 0;
-            font-weight: bold;
-            display: flex;
-            align-items: center;
-            transition: color 0.3s, transform 0.3s;
-        }
-
-        .email:hover {
-            color: #ff4500;
-            transform: translateX(5px);
-        }
-
-        .email::before {
-            content: '\2709';
-            font-size: 1.2em;
-            margin-right: 10px;
-            color: #ffa500;
-            transition: color 0.3s;
-        }
-
-        .email:hover::before {
-            color: #ff4500;
-        }
-
-        .purpose {
-            font-size: 1em;
-            color: #b0b0b0;
-            margin-bottom: 15px;
-            font-style: italic;
-        }
-
-        .contact-section {
-            width: 100%;
-            max-width: 600px;
-            padding: 20px;
-            text-align: left;
-        }
-
         footer {
             text-align: center;
-            margin-top: auto;
+            position: absolute;
+            bottom: 0px;
+            left: 50%;
+            transform: translateX(-50%);
             color: #666;
-            font-size: 0.8em;
-            padding: 10px 0;
+            font-size: 0.8rem;
+            padding: 20px 0;
         }
 
-        @keyframes fadeIn {
-            from {
-                opacity: 0;
-            }
-            to {
-                opacity: 1;
-            }
+        .social-media {
+            margin-top: 20px;
+        }
+
+        .social-media a {
+            margin: 5px 10px;
+            font-size: 1.5em;
+            color: #00bcd4;
+        }
+
+        .social-media a:hover {
+            color: #03a9f4;
         }
 
         @media (max-width: 600px) {
             h1 {
-                font-size: 2.5em;
+                font-size: 2rem;
             }
-            .email {
-                font-size: 1.2em;
+            .contact-container p {
+                font-size: 1rem;
             }
-            .purpose {
-                font-size: 0.9em;
+            .home {
+                position: fixed;
+                bottom: 10px;
+                right: 10px;
             }
         }
     </style>
 </head>
 <body>
-    <h1>Contact ASH</h1>
-    <div class="contact-section">
-        <a href="mailto:me@theash.me" class="email">me@theash.me</a>
-        <p class="purpose">For personal inquiries</p>
-
-        <a href="mailto:work@theash.me" class="email">work@theash.me</a>
-        <p class="purpose">For work inquiries</p>
-
+    <div class="contact-container">
+        <h1>Contact Me</h1>
+        <p>Personal: <a href="mailto:me@theash.me"><i class="fas fa-envelope"></i> me@theash.me</a></p>
+        <p>Work: <a href="mailto:work@theash.me"><i class="fas fa-envelope"></i> contact@theash.me</a></p>
+        <div class="social-media">
+            <a href="https://twitter.com/yourprofile" target="_blank"><i class="fab fa-twitter"></i> Twitter</a>
+            <a href="https://github.com/yourprofile" target="_blank"><i class="fab fa-github"></i> GitHub</a>
+        </div>
     </div>
     <div class="home">
         <a href="https://theash.me">Home</a>
