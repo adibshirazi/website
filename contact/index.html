@@ -1,0 +1,140 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>ASH - Contact</title>
+    <link rel="icon" href="icon.png" type="image/png">
+    <style>
+        body {
+            background-color: black;
+            color: #f0f0f0;
+            font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+            margin: 0;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            flex-direction: column;
+            min-height: 100vh;
+            animation: fadeIn 2s ease;
+        }
+
+        h1, .contact-section, footer {
+            animation: fadeIn 2s ease;
+        }
+
+        h1 {
+            font-size: 3em;
+            margin-bottom: 20px;
+            color: #ff8c00;
+            text-align: center;
+        }
+
+        .home {
+            position: absolute;
+            bottom: 20px;
+            right: 20px;
+            color: #666;
+            font-family: Arial, Helvetica, sans-serif;
+            font-size: 0.8em;
+            text-align: center;
+        }
+
+        .home a {
+            color: #666;
+            text-decoration: none;
+        }
+
+        .home a:hover {
+            color: #666;
+            transform: none;
+        }
+
+        .email {
+            font-size: 1.3em;
+            color: #ffa500;
+            text-decoration: none;
+            margin: 10px 0;
+            font-weight: bold;
+            display: flex;
+            align-items: center;
+            transition: color 0.3s, transform 0.3s;
+        }
+
+        .email:hover {
+            color: #ff4500;
+            transform: translateX(5px);
+        }
+
+        .email::before {
+            content: '\2709';
+            font-size: 1.2em;
+            margin-right: 10px;
+            color: #ffa500;
+            transition: color 0.3s;
+        }
+
+        .email:hover::before {
+            color: #ff4500;
+        }
+
+        .purpose {
+            font-size: 1em;
+            color: #b0b0b0;
+            margin-bottom: 15px;
+            font-style: italic;
+        }
+
+        .contact-section {
+            width: 100%;
+            max-width: 600px;
+            padding: 20px;
+            text-align: left;
+        }
+
+        footer {
+            text-align: center;
+            margin-top: auto;
+            color: #666;
+            font-size: 0.8em;
+            padding: 10px 0;
+        }
+
+        @keyframes fadeIn {
+            from {
+                opacity: 0;
+            }
+            to {
+                opacity: 1;
+            }
+        }
+
+        @media (max-width: 600px) {
+            h1 {
+                font-size: 2.5em;
+            }
+            .email {
+                font-size: 1.2em;
+            }
+            .purpose {
+                font-size: 0.9em;
+            }
+        }
+    </style>
+</head>
+<body>
+    <h1>Contact ASH</h1>
+    <div class="contact-section">
+        <a href="mailto:me@theash.me" class="email">me@theash.me</a>
+        <p class="purpose">For personal inquiries</p>
+
+        <a href="mailto:work@theash.me" class="email">work@theash.me</a>
+        <p class="purpose">For work inquiries</p>
+
+    </div>
+    <div class="home">
+        <a href="https://theash.me">Home</a>
+    </div>
+    <footer>&copy; 2025 ASH. All rights reserved.</footer>
+</body>
+</html>
